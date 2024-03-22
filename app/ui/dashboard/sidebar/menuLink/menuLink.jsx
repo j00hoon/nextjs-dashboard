@@ -11,11 +11,11 @@ const MenuLink = ({item}) => {
     const pathname = usePathname();
 
 
-
     return (
         <Link
             href={item.path} 
-            className={`${styles.container} && ${pathname === item.path && styles.active}`}
+            className={`${styles.container} 
+                && ${pathname === item.path && styles.active}`}
         >
             {item.icon}
             {item.title}
