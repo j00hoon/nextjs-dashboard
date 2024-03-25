@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
 .title {
     color: var(--textSoft);
@@ -32,6 +32,7 @@
     background-color: transparent;
     border: none;
     color: var(--text);
+    outline: none;
 }
 
 .icons {
