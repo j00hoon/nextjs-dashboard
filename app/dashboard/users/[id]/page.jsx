@@ -33,12 +33,12 @@ const SingleUser = () => {
                     <label>Address</label>
                     <input type="text" name="address" placeholder="New York" />
                     <label>Is Admin?</label>
-                    <select name="isAdmin" id="isAdmin">
+                    <select name="isAdmin" id="isAdmin" defaultValue="None">
                         <option value={true}>Yes</option>
                         <option value={false}>No</option>
                     </select>
                     <label>Is Active?</label>
-                    <select name="isActive" id="isActive">
+                    <select name="isActive" id="isActive" defaultValue="None">
                         <option value={true}>Yes</option>
                         <option value={false}>No</option>
                     </select>

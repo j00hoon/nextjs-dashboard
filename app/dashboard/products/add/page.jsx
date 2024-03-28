@@ -8,8 +8,8 @@ const AddProduct = () => {
         <div className={styles.container}>
             <form action="" className={styles.form}>
                 <input type="text" placeholder="title" name="title" required />
-                <select name="category" id="category">
-                    <option value="general">Choose a category</option>
+                <select name="category" id="category" defaultValue="Choose a category">
+                    {/* <option value="general">Choose a category</option> */}
                     <option value="kitchen">Kitchen</option>
                     <option value="Phone">Phone</option>
                     <option value="Computer">Computer</option>

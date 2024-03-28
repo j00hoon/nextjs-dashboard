@@ -33,7 +33,7 @@ const SingleProduct = () => {
                     <label>Size</label>
                     <input type="text" name="size" placeholder="Large" />
                     <label>Category</label>
-                    <select name="cat" id="cat">
+                    <select name="cat" id="cat" defaultValue="None">
                         <option value="kitchen">Kitchen</option>
                         <option value="computers">Computers</option>
                     </select>
