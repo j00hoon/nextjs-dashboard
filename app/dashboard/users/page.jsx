@@ -11,9 +11,13 @@ import Link from "next/link";
 
 
 
-const Users = async () => {
+const Users = async ({ searchParams }) => {
 
-  const users = await fetchUsers();
+  console.log("searchParams : " + JSON.stringify(searchParams, null, 2));
+
+  const q = searchParams?.q || "";
+
+  const users = await fetchUsers(q);
 
   
 
