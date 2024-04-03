@@ -1,10 +1,11 @@
+import { deleteUser } from "@/app/lib/action";
 import { fetchUsers } from "@/app/lib/data";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Search from "@/app/ui/dashboard/search/search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { searchParams } from "next/navigation";
+// import { searchParams } from "next/navigation";
 
 
 
@@ -77,9 +78,10 @@ const Users = async ({ searchParams }) => {
                   <Link href={`/dashboard/users/${user.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>View</button>
                   </Link>
-                  <Link href="/dashboard/users">
+                  <form action={deleteUser}>
+                    <input type="hidden" name="id" value={user.id} />
                     <button className={`${styles.button} ${styles.delete}`}>Delete</button>
-                  </Link>
+                  </form>
                 </div>
               </td>
             </tr>
