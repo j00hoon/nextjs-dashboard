@@ -62,6 +62,34 @@ export const deleteUser = async (formData) => {
 }
 
 
+export const updateUser = async (formData) => {
+    
+    const { id, username, email, password, phone, address, isAdmin, isActive } = Object.fromEntries(formData);
+
+    try {
+
+        connectDB();
+
+        const updateFields = {
+            username, email, password, phone, address, isAdmin, isActive
+        }
+
+        Object.keys(updateFields).forEach(
+            key => 
+                (updateFields[key] === "" || undefined) && delete updateFields[key])
+        
+        await User.findByIdAndUpdate(id, updateFields);
+        
+    } catch (err) {
+        throw new Error(`Failed to update user ${err}`);
+    }
+
+
+    revalidatePath("/dashboard/users");
+    redirect("/dashboard/users");
+}
+
+
 
 
 
