@@ -64,7 +64,7 @@ const productSchema = new mongoose.Schema({
         required:true,
         unique:true,
     },
-    desc:{
+    description:{
         type:String,
         required:true,
     },
@@ -87,6 +87,9 @@ const productSchema = new mongoose.Schema({
     size:{
         type:String,
     },
+    category:{
+        type:String,
+    }
 }, { timestamps : true })
 
 
